@@ -27,6 +27,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="jez-hW-Tiq"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e8u-7X-I3Q">
                                 <rect key="frame" x="49" y="243" width="25" height="21"/>
@@ -59,7 +62,7 @@
                                 </segments>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bk2-8N-Zkc">
-                                <rect key="frame" x="329" y="406" width="42" height="21"/>
+                                <rect key="frame" x="301" y="407" width="70" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -74,11 +77,20 @@
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Tip Calculator" id="CC4-4j-VAd"/>
+                    <connections>
+                        <outlet property="billField" destination="ZRW-2w-XSW" id="eHU-6o-xb1"/>
+                        <outlet property="tipLabel" destination="GyR-Kf-rQt" id="ZGb-V8-ypd"/>
+                        <outlet property="totalLabel" destination="bk2-8N-Zkc" id="lFa-AM-Py7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="EkN-MU-6Xb"/>
+                <tapGestureRecognizer id="EkN-MU-6Xb">
+                    <connections>
+                        <action selector="onTap:" destination="BYZ-38-t0r" id="EzZ-yN-a8a"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="314" y="149"/>
+            <point key="canvasLocation" x="313.04347826086956" y="148.66071428571428"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="PE2-yj-P6z">
